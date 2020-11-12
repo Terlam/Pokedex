@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+<link rel="stylesheet" href="css/styles.css">
+<title>AD Pokedex</title>
+</head>
+<body>
+    <div class="container justify-content-center">
+        <h2>Terrell's Pokedex</h2>
+            <form class="form-inline" action="#pokeDetails-page" name="pokedexForm" id="pokedexForm">
+                <div class="form-group mb-2">
+                    <label for="pokeName" class="sr-only">Search</label>
+                    <input type="text" name="pokeName" class="form-control" placeholder="Snorlax" id="pokeName">
+                </div>
+                <button type="button" class="btn btn-primary mb-2" onclick="getPokemon()">Search</button>
+            </form>
+
+            <div>
+                <ul data-role="listview" data-inset="true" id="pokeDetails">
+
+                </ul>
+            </div>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

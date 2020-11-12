@@ -1,12 +1,12 @@
 function getPokemon() {
     let pokeNames = document.querySelector('#pokeName').value;
-    fetch(`http://pokeapi.co/api/v2/pokemon/${pokeNames}`)
+    fetch(`https://pokeapi.co/api/v2/pokemon/${pokeNames}`)
     .then(response => response.json())
     .then(data => {
         console.log(data)
     
     // let pokeURL = `http://pokeapi.co/api/v1/pokemon/${param}/`;
-     let pokeURL2 = `http://pokeapi.co/api/v2/pokemon/${pokeNames}`;
+     let pokeURL2 = `https://pokeapi.co/api/v2/pokemon/${pokeNames}`;
 
 
 

@@ -13,23 +13,25 @@ function getPokemon() {
 
         let pokeID = data.id;
         let pokeName = data.name;
-        let pokeType1 = data.types[0].name;
+        let pokeType1 = data.types[0].type.name;
         if (data.types.length ==2) {
-            let pokeType2 = data.types[1].name;
+            let pokeType2 = data.types[1].type.name;
+            console.log(pokeType2)
         }
         else pokeType2 = null;
 
         // concatenate new URL for next GET request
-        let descriptionURI = `https://pokeapi.co/api/v2/pokemon-species/${pokeName}//form_descriptions.description`;
+        let descriptionURI = `https://pokeapi.co/api/v2/pokemon-species/${pokeName}`;
 
         // this variable will hold the description string
-        let pokeDescription = "";
+        let pokeDescription = " ";
 
         // GET request to new URL
         fetch(descriptionURI)
         .then(response => response.json())
         .then(data2 => {
             console.log(data2)
+            pokeDescription = data2.flavor_text_entries[0].flavor_text
 
         });
 
@@ -38,7 +40,7 @@ function getPokemon() {
         .then(response => response.json())
         .then(data3 => {
             console.log(data3)
-            let imageURI = data3.sprites.front_shiny;
+            let imageURI = data3.sprites.other.dream_world.front_default;
         
         
 

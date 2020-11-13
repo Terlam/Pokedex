@@ -31,7 +31,7 @@ function getPokemon() {
         .then(response => response.json())
         .then(data2 => {
             console.log(data2)
-            pokeDescription = data2.flavor_text_entries[0].flavor_text
+            pokeDescription = data2.flavor_text_entries[20].flavor_text
 
         });
 
@@ -47,7 +47,7 @@ function getPokemon() {
          // append data to HTML
             // empty string to hold HTML
             let li = "";
-            li += '<li><img src="' + imageURI + '">';
+            li += '<p><img src="' + imageURI + '"></p>';
             li += '<h1>#' + pokeID + ' ' + pokeName + '</h1>';
             li += '<p>Type 1: ' + pokeType1 + '</p>';
 

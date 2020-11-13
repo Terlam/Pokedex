@@ -65,6 +65,8 @@ function getPokemon() {
             // append new li to listview
             $("#pokeDetails").append(li).promise().done(function(){
                     $(this).listview("refresh");
+
+            
             });
         });
     }); // 2nd and 3rd GET request is nested inside success function of 1st request

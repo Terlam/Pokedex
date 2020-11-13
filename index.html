@@ -13,7 +13,7 @@
 <body>
     <div class="container justify-content-center">
         <h2>Terrell's Pokedex</h2>
-            <form class="form-inline" action="#pokeDetails-page" name="pokedexForm" id="pokedexForm">
+            <form class="form-inline" action="#pokeDetail-page" name="pokedexForm" id="pokedexForm">
                 <div class="form-group mb-2">
                     <label for="pokeName" class="sr-only">Search</label>
                     <input type="text" name="pokeName" class="form-control" placeholder="Snorlax" id="pokeName">
@@ -21,7 +21,23 @@
                 <button type="button" class="btn btn-primary mb-2" onclick="getPokemon()">Search</button>
             </form>
 
-            <div>
+
+            <div class="card text-center" data-role="listview" data-inset="true" id="pokeDetails" >
+                <div class="card-header" id="pokemonName">
+                  <!-- Featured
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Special title treatment</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+                <div class="card-footer text-muted">
+                  2 days ago -->
+                </div>
+              </div>
+
+
+            <div class="container justify-content-center">
                 <ul data-role="listview" data-inset="true" id="pokeDetails">
 
                 </ul>

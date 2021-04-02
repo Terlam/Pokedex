@@ -4,49 +4,83 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="Description" content="Enter your description here"/>
+<meta name="Terrell's Pokedex" content="Another Pokedex out here in the wild. "/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
 <link rel="stylesheet" href="css/styles.css">
-<title>AD Pokedex</title>
+<link rel="icon" href="/Pokedex/favicons/favicon.ico">
+<link rel="icon" href="/Pokedex/favicons/favicon.ico" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/Pokedex/favicons/apple-touch-icon.png">
+<link rel="icon" href="/Pokedex/favicons/path.webmanifest">
+
+<title>T's Pokedex</title>
 </head>
 <body>
+    <!-- Search bar and button  Section -->
+
     <div class="container justify-content-center">
+        
+      <div class="dexcolor container">
+          
         <h2>Terrell's Pokedex</h2>
+
             <form class="form-inline" action="#pokeDetail-page" name="pokedexForm" id="pokedexForm">
-                <div class="form-group mb-2">
+                
+              <div class="form-group mb-2">
                     <label for="pokeName" class="sr-only">Search</label>
                     <input type="text" name="pokeName" class="form-control" placeholder="Snorlax" id="pokeName">
-                </div>
-                <button type="button" class="btn btn-primary mb-2" onclick="getPokemon()">Search</button>
-            </form>
-
-
-            <div class="card text-center" data-role="listview" data-inset="true" id="pokeDetails" >
-                <div class="card-header" id="pokemonName">
-                  <!-- Featured
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-                <div class="card-footer text-muted">
-                  2 days ago -->
-                </div>
               </div>
+                
+              <button type="button" class="pushable" onclick="getPokemon()">
+                <span class="front">
+                  Search
+                </span>
+              </button>
+           
+             </form>
+      </div>
 
+        <!-- Pokemon and info appears here when called -->
 
-            <div class="container justify-content-center">
-                <ul data-role="listview" data-inset="true" id="pokeDetails">
+      <div class="card text-center" data-role="listview" data-inset="true" id="pokeDetails" >
+        <div class="card-header" id="pokemonName">        
+        </div>
+      </div>
+        <!-- <div class="container justify-content-center pokecontent">
 
-                </ul>
-            </div>
+            <ul data-role="listview" data-inset="true" id="pokeDetails">
+
+            </ul>
+        </div> -->
+
+        <!-- bottom of pokedex -->
+      <div class="dexcolorlow container">
+        <div class="row">
+          <div class="col-sm-1">
+            <button class="pushable">
+              <span class="front">
+                Previous
+              </span>
+            </button>
+          </div>
+          <div class="col-sm-10">
+            <span></span>
+          </div>
+          <div class="col-sm-1">
+            <button class="pushable">
+              <span class="front">
+                Next
+              </span>  
+            </button>
+          </div>
+        </div>
+      </div>
+      
     </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

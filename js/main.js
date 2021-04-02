@@ -47,7 +47,7 @@ function getPokemon() {
          // append data to HTML
             // empty string to hold HTML
             let li = "";
-            li += '<p><img src="' + imageURI + '"></p>';
+            li += '<p>\n<img src="' + imageURI + '"></p>';
             li += '<h1>#' + pokeID + ' ' + pokeName + '</h1>';
             li += '<p>Type 1: ' + pokeType1 + '</p>';
 

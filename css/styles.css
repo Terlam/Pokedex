@@ -73,6 +73,19 @@ transform: translateY(-2px);
     padding-top: 10px;
     padding-left: 20px;
 }
-.right{
-    float: right;
-}
+
+@media (max-width: 768px) {
+    .btn-responsive {
+      padding:2px 4px;
+      font-size:80%;
+      line-height: 1;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 992px) {
+    .btn-responsive {
+      padding:4px 9px;
+      font-size:90%;
+      line-height: 1.2;
+    }
+  }

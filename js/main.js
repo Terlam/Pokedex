@@ -14,12 +14,15 @@ function getPokemon() {
         let pokeID = data.id;
         let pokeName = data.name;
         let pokeType1 = data.types[0].type.name;
-        if (data.types.length ==2) {
+        
+        // let pokeType2 = (data.types.length > 1) ? data.types[1].name :'none'
+        if (data.types.length == 2) {
+
             let pokeType2 = data.types[1].type.name;
             console.log(pokeType2)
+        } else {
+            let pokeType2 = null;
         }
-        else pokeType2 = null;
-
         // concatenate new URL for next GET request
         let descriptionURI = `https://pokeapi.co/api/v2/pokemon-species/${pokeName}`;
 
@@ -50,11 +53,21 @@ function getPokemon() {
             li += '<p>\n<img src="' + imageURI + '"></p>';
             li += '<h1>#' + pokeID + ' ' + pokeName + '</h1>';
             li += '<p>Type 1: ' + pokeType1 + '</p>';
+            
 
+             if (data.types.length == 2) {
+
+            let pokeType2 = data.types[1].type.name;
+            console.log(pokeType2)
+            li += '<p>Type 2: ' + pokeType2 + '</p>';
+            console.log(pokeType2 + "is the pokemon type")
+            
+        } else {
+            let pokeType2 = null;
+        }
             // only display Type 2 if it is not null
-            if (pokeType2 != null){
-                li += '<p>Type 2: ' + pokeType2 + '</p>';
-            }
+           
+
 
             li += '<p>' + pokeDescription + '</p>';
             li += '</li>';
